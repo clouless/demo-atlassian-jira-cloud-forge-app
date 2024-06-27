@@ -32,6 +32,7 @@ npm run build
 ```
 cd packages/backend
 npm install
+npm run build
 forge deploy
 forge install
 ```
