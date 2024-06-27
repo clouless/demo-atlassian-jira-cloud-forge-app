@@ -50,3 +50,18 @@ forge install
 (3) Open Developer Console and see the forge bridge CSS loading errors
 
 ![](./doc/doc-dark-mode-fail.png)
+
+### :white_check_mark: SOLUTION
+
+There has been a deprecated entry in the `public/index.html` whith:
+
+```
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="style-src 'unsafe-inline' 'self'"
+    /><!-- needed to allow inline styles of styled-components -->
+```
+
+:white_check_mark: Simply delete that and it works!
+
+![](./doc/doc-works.png)
