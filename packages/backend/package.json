@@ -1,0 +1,23 @@
+{
+  "name": "@codeclou/demo-atlassian-jira-cloud-forge-app",
+  "version": "1.0.46",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "tunnel": "forge tunnel --ngrok-config '/Users/clouless/Library/Application Support/ngrok/ngrok.yml'",
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^4.1.5"
+  },
+  "dependencies": {
+    "@forge/api": "^3.7.0",
+    "@forge/bridge": "^3.4.0",
+    "@forge/resolver": "^1.5.35",
+    "@forge/ui": "^1.11.0",
+    "yup": "^1.4.0"
+  },
+  "main": "src/index"
+}

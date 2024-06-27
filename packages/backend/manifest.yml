@@ -1,0 +1,54 @@
+modules:
+  jira:globalPage:
+    - key: demo-jira-forge-codeclou-page
+      resource: main
+      resolver:
+        function: resolver
+      title: demo-jira-forge-codeclou
+      icon: resource:icons;app-logo.png
+      layout: basic
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: icons
+    path: static/icons
+  - key: main
+    path: static/generated-frontend
+    tunnel:
+      port: 3000
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/e46b1f9e-7fbb-441e-bb77-39bf4e38a4e7
+permissions:
+  scopes:
+    # granular
+    - read:field:jira
+    - read:field-configuration:jira
+    - read:custom-field-contextual-configuration:jira
+    - read:field.default-value:jira
+    - write:field.default-value:jira
+    - read:field.option:jira
+    - write:field.option:jira
+    - delete:field.option:jira
+    - read:permission:jira
+    - read:project-category:jira
+    - read:project:jira
+    - read:application-role:jira
+    - read:group:jira
+    - read:user:jira
+    - read:avatar:jira
+    # storage
+    - storage:app
+  content:
+    styles:
+      - unsafe-inline
+    scripts:
+      - unsafe-hashes
+      - unsafe-eval
+      - unsafe-inline
+  external:
+    images:
+      - "*.gravatar.com"
+      - "*.wp.com"
